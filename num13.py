@@ -8,7 +8,6 @@ app = FastAPI()
 async def cla(life :str):
     Fate = ["مجرد","متاهل"]
     if life in Fate and life == "مجرد":
-        return{"message:"f'شما مجرد هستید'}
-    else:
-        return{"message":f'شما متاهل هستید'}
+        return "'شما مجرد هستید"
+    return "شما متاهل هستید"
 

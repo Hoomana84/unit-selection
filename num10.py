@@ -11,5 +11,4 @@ async def reading(phone:str):
     M = phone[0:3]
     if (M in Fn) and (len(phone) == 11):
         return {"message": "your phone number have not wrong!"}
-    else:
-        return "None"
+    return "None"

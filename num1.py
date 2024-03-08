@@ -2,10 +2,10 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
-@app.get("/Univercity/{st_id}")
+@app.get("/Univercity/{st}")
 def checking(st):
     l = len(st)
-    st_id = int(st)
+    st = int(st)
     if l == 11:
         year = (st // 100000000)
         if 400 <= year <= 402:

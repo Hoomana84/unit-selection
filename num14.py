@@ -18,5 +18,4 @@ async def Validation(number: str):
         r = 11 - r
     if r == c:
         return "this number is valid"
-    else:
-        return "this number have wrong!"
+    return "this number have wrong!"

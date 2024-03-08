@@ -9,9 +9,8 @@ def validate_shamsi_date(date_str):
     except ValueError:
         return False
 
-@app.get("/validate-shamsi-date/{date}")
-async def validate_shamsi_date_endpoint(date:str):
+@app.get("/home/{date}")
+async def date(date):
     if validate_shamsi_date(date):
         return {"message":"date is valid "}
-    else:
-        raise HTTPException(status_code=404,detail="date is invalid")
+    raise HTTPException(status_code=404,detail="date is invalid")
